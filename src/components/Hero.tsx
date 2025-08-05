@@ -32,23 +32,24 @@ const Hero = () => {
             Entenda como pensa seu cliente e foge da guerra de preços!
           </p>
           
-          <p className="text-lg text-foreground/80 mb-10 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-foreground/80 mb-6 max-w-4xl mx-auto leading-relaxed">
             Pode parecer exagero, mas em breve cada vez mais compradores de sistema fotovoltaico estarão 
             informados. Eles saberão comparar propostas com mais precisão do que você, examinarão 
             cuidadosamente seus fornecedores e suas propostas tecnológicas e avaliarão de forma crítica 
             a confiabilidade da sua empresa.
           </p>
           
-          <p className="text-lg text-foreground/80 mb-8 max-w-4xl mx-auto">
+          <p className="text-lg text-foreground/80 mb-6 max-w-4xl mx-auto">
             E quem não entender essa nova jornada de compra, perderá vendas.
           </p>
           
+          <p className="text-lg text-foreground/80 mb-8 max-w-4xl mx-auto">
+            <strong>A boa notícia?</strong> Ainda dá tempo para reverter essa situação.
+          </p>
+          
           <div className="bg-primary/20 backdrop-blur-lg rounded-lg p-6 mb-10 max-w-4xl mx-auto border border-primary/30">
-            <p className="text-lg text-white mb-4">
-              <strong>A boa notícia?</strong> Ainda dá tempo para reverter essa situação.
-            </p>
-            <p className="text-lg text-white">
-              Com o Manual de Compra Profissional Solar Buy-Side, você verá o processo de compra pelos 
+            <p className="text-lg text-white flex items-center gap-2">
+              📘 Com o Manual de Compra Profissional Solar Buy-Side, você verá o processo de compra pelos 
               olhos do cliente — ganhando técnica, confiabilidade e mais vendas.
             </p>
           </div>

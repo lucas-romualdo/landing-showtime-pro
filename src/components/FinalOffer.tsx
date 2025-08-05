@@ -3,11 +3,11 @@ import { CheckCircle, Clock, Users, BookOpen } from "lucide-react";
 
 const FinalOffer = () => {
   const offerItems = [
-    "Oferta exclusiva para Profissional",
-    "Acesso imediato ao Manual Solar Buy-Side", 
-    "130 páginas técnicas + 160 tópicos interativos",
-    "Método de jornada de compra completo em 4 fases",
-    "Anexos técnicos exclusivos"
+    "💥 Oferta exclusiva para Profissional",
+    "🔓 Acesso imediato ao Manual Solar Buy-Side", 
+    "📘 130 páginas técnicas + 160 tópicos interativos",
+    "🎯 Método de jornada de compra completo em 4 fases",
+    "🎁 Anexos técnicos exclusivos"
   ];
 
   return (
@@ -31,8 +31,8 @@ const FinalOffer = () => {
                 <div className="space-y-4 mb-8">
                   {offerItems.map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <CheckCircle className="w-6 h-6 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 text-lg">{item}</span>
+                      <span className="text-2xl">{item.split(' ')[0]}</span>
+                      <span className="text-gray-700 text-lg">{item.substring(item.indexOf(' ') + 1)}</span>
                     </div>
                   ))}
                 </div>

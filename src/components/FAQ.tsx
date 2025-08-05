@@ -6,23 +6,15 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Como acesso meu produto?",
-      answer: "Após a confirmação do pagamento, você receberá um e-mail com o link para download do Manual Solar Buy-Side em formato PDF. O acesso é imediato e você poderá baixar o material quantas vezes precisar."
+      answer: "Você receberá o acesso ao Manual Solar Buy-Side por e-mail, por meio da plataforma online Eduzz. Esta plataforma atua como intermediadora digital entre clientes e produtores, disponibilizando conteúdos, soluções e ferramentas tecnológicas. O conteúdo será acessado de forma online na plataforma Eduzz, utilizando seu login e senha. Você poderá acessar o manual por meio de computador, celular, tablet ou outro dispositivo digital. No entanto, devido à formatação do manual em tamanho A4, recomendamos enfaticamente o uso de um computador ou tablet para uma experiência de leitura e aproveitamento mais otimizada do material."
     },
     {
       question: "Como funciona o 'Prazo de Garantia' e a solicitação de devolução do pagamento?",
-      answer: "Oferecemos garantia incondicional de 30 dias. Se por qualquer motivo você não ficar satisfeito com o manual, basta solicitar o reembolso total através do nosso e-mail de suporte."
+      answer: "O reembolso de uma compra de um produto digital é um direito garantido pelo Código de Defesa do Consumidor (Lei nº 8.078, Artigo 49) e pode ser solicitado em até 7 dias a partir da data de assinatura ou do recebimento do produto."
     },
     {
       question: "Política de Devolução: Como proceder para o reembolso?",
-      answer: "Para solicitar o reembolso, envie um e-mail para contato@buyside.com.br dentro do prazo de 30 dias após a compra, informando seus dados e o motivo da solicitação. O reembolso será processado em até 7 dias úteis."
-    },
-    {
-      question: "O manual é atualizado regularmente?",
-      answer: "Sim, o Manual Solar Buy-Side é atualizado sempre que há mudanças significativas no mercado fotovoltaico. Compradores recebem as atualizações gratuitamente por 1 ano."
-    },
-    {
-      question: "Posso compartilhar o manual com minha equipe?",
-      answer: "Esta é uma licença individual para profissionais. Para uso em equipe, temos pacotes corporativos especiais. Entre em contato para mais informações."
+      answer: "Para formalizar o pedido de reembolso do valor despendido, o Comprador deverá remeter sua solicitação ao endereço eletrônico contato@buyside.com.br. A comunicação deverá conter, obrigatoriamente, o número de referência da transação e a exposição detalhada da(s) razão(ões) que fundamenta(m) o pleito de cancelamento. As condições para efetivação do reembolso pautam-se nas Regras Gerais estabelecidas pela plataforma Eduzz. Para informações adicionais e consulta integral às diretrizes aplicáveis, o Comprador poderá acessar o seguinte link: https://ajuda.eduzz.com/hc/pt-br/articles/34175176026523-Quais-s%C3%A3o-as-regras-gerais-de-reembolso-Eduzz"
     }
   ];
 

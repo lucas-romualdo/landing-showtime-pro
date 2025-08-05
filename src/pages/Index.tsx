@@ -2,9 +2,9 @@ import Hero from "@/components/Hero";
 import ManualReveal from "@/components/ManualReveal";
 import TargetAudience from "@/components/TargetAudience";
 import Results from "@/components/Results";
-import Testimonial from "@/components/Testimonial";
+import UrgencyWarning from "@/components/UrgencyWarning";
 import BuyerPreparation from "@/components/BuyerPreparation";
-import SocialProof from "@/components/SocialProof";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import AuthorCredibility from "@/components/AuthorCredibility";
 import FinalOffer from "@/components/FinalOffer";
 import LeadMagnet from "@/components/LeadMagnet";
@@ -18,9 +18,9 @@ const Index = () => {
       <ManualReveal />
       <TargetAudience />
       <Results />
-      <Testimonial />
+      <UrgencyWarning />
       <BuyerPreparation />
-      <SocialProof />
+      <TestimonialsCarousel />
       <AuthorCredibility />
       <FinalOffer />
       <LeadMagnet />

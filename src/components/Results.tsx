@@ -8,7 +8,7 @@ const Results = () => {
       result: "Apresentações mais persuasivas e personalizadas"
     },
     {
-      skill: "Adotar uma postura mais consultiva, transparente e centrada no cliente",
+      skill: "Adotar uma postura mais consultiva, transparente e centrada na realidade do cliente",
       result: "Mais confiança, conexão e autoridade no processo de venda"
     },
     {
@@ -78,7 +78,7 @@ const Results = () => {
                   <p className="text-sm text-card-foreground">{benefit.skill}</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <TrendingUp className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-green-500 mt-1 flex-shrink-0">✅</span>
                   <p className="text-sm text-card-foreground font-medium">{benefit.result}</p>
                 </div>
               </div>
@@ -88,8 +88,8 @@ const Results = () => {
 
         <div className="text-center bg-primary/10 rounded-lg p-8 border border-primary/30">
           <p className="text-lg text-foreground mb-4">
-            A história de Rodrigo é apenas um exemplo do poder deste Manual. Ele é uma ponte entre o comprador 
-            bem informado e o vendedor preparado — impulsionando negociações justas e satisfatórias
+            A experiência de Rodrigo é apenas um exemplo do poder deste Manual. Ele é uma ponte entre o comprador 
+            bem informado e o vendedor preparado — impulsionando negociações justas e satisfatórias.
           </p>
         </div>
       </div>

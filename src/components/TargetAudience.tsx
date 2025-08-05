@@ -3,37 +3,37 @@ import { Building2, UserPlus, TrendingUp, Megaphone, Cog, Package, CreditCard } 
 const TargetAudience = () => {
   const audiences = [
     {
-      icon: Building2,
+      icon: "🌞",
       title: "Empresas de integração solar",
       description: "Para vender valor, fugir da guerra dos preços e fechar mais projetos."
     },
     {
-      icon: UserPlus,
+      icon: "🚀",
       title: "Empreendedores iniciantes na integração solar",
       description: "Para construir um negócio sólido desde o primeiro passo."
     },
     {
-      icon: TrendingUp,
+      icon: "💼",
       title: "Representantes comerciais de sistema solar",
-      description: "Para aumentar sua taxa de conversão reduzindo sua taxa de desconto."
+      description: "Maximizar a conversão e fortalecer o posicionamento de preço."
     },
     {
-      icon: Megaphone,
+      icon: "🎯",
       title: "Agências de marketing",
       description: "Para gerar leads qualificados com um público informado."
     },
     {
-      icon: Cog,
+      icon: "🏭",
       title: "Fabricantes de equipamentos",
       description: "Para compreender a importância da visibilidade da marca para o consumidor final."
     },
     {
-      icon: Package,
+      icon: "🚚",
       title: "Distribuidoras de kit fotovoltaico",
       description: "Para garantir a preferência do cliente final."
     },
     {
-      icon: CreditCard,
+      icon: "💳",
       title: "Instituições financeiras",
       description: "Para captar com maior eficiência clientes qualificados."
     }
@@ -55,28 +55,25 @@ const TargetAudience = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {audiences.map((audience, index) => {
-            const IconComponent = audience.icon;
-            return (
-              <div key={index} className="bg-card rounded-lg p-6 border border-border shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                      <IconComponent className="w-6 h-6 text-primary" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-card-foreground mb-2">
-                      {audience.title}
-                    </h3>
-                    <p className="text-card-foreground/80 text-sm">
-                      {audience.description}
-                    </p>
+          {audiences.map((audience, index) => (
+            <div key={index} className="bg-card rounded-lg p-6 border border-border shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-2xl">
+                    {audience.icon}
                   </div>
                 </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-card-foreground mb-2">
+                    {audience.title}
+                  </h3>
+                  <p className="text-card-foreground/80 text-sm">
+                    {audience.description}
+                  </p>
+                </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
         <div className="text-center bg-primary/10 rounded-lg p-8 border border-primary/30">
@@ -88,7 +85,7 @@ const TargetAudience = () => {
 
         <div className="text-center mt-12">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            Manual Solar Buy-Side: Sua ferramenta estratégica essencial para 
+            Manual Solar Buy-Side: Sua ferramenta essencial para 
             todos os profissionais do setor solar.
           </h3>
         </div>
