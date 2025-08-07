@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, TrendingUp, Users, Award } from "lucide-react";
+import rodrigoImage from "@/assets/Integrador Rodrigo SP.png";
 
 const Results = () => {
   const benefits = [
@@ -36,27 +37,7 @@ const Results = () => {
           </Button>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <div className="bg-primary/10 rounded-lg p-8 border border-primary/30">
-              <h3 className="text-2xl font-bold text-foreground mb-6">
-                O Manual de Compra Profissional Solar Buy-Side
-              </h3>
-              <p className="text-foreground/80 leading-relaxed mb-6">
-                é uma leitura essencial para profissionais do setor de vendas (Sell-Side) que desejam se destacar 
-                em um mercado ultracompetitivo.
-              </p>
-              <p className="text-foreground/80 leading-relaxed mb-6">
-                Ao proporcionar uma imersão na jornada de compra sob a ótica do comprador, este manual oferece uma 
-                compreensão estratégica dos critérios, motivações e desafios enfrentados pelo lado comprador (Buy-Side).
-              </p>
-              <p className="text-foreground/80 leading-relaxed">
-                Ao dominar o conceito Buy-Side, vendedores estarão aptos a lapidar sua abordagem comercial, entregar 
-                valor real, distanciar-se da briga por preço e elevar sua credibilidade no relacionamento com os clientes.
-              </p>
-            </div>
-          </div>
-
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="space-y-6">
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="text-center">
@@ -73,16 +54,39 @@ const Results = () => {
 
             {benefits.map((benefit, index) => (
               <div key={index} className="grid grid-cols-2 gap-4 p-4 bg-card rounded-lg border border-border">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                  <p className="text-sm text-card-foreground">{benefit.skill}</p>
+                <div className="text-card-foreground">
+                  {benefit.skill}
                 </div>
-                <div className="flex items-start gap-2">
+                <div className="flex items-start gap-2 text-card-foreground">
                   <span className="text-green-500 mt-1 flex-shrink-0">✅</span>
-                  <p className="text-sm text-card-foreground font-medium">{benefit.result}</p>
+                  <span>{benefit.result}</span>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="space-y-8">
+            <div className="text-center">
+              <img 
+                src={rodrigoImage} 
+                alt="Rodrigo, integrador de São Paulo"
+                className="w-full max-w-sm mx-auto rounded-lg shadow-lg mb-6"
+              />
+            </div>
+            
+            <div className="bg-card rounded-lg p-6 border border-border">
+              <p className="text-lg font-semibold mb-4 text-card-foreground">
+                Os benefícios são claros, e a prática comprova. Veja a experiência de Rodrigo, integrador de SP:
+              </p>
+              
+              <blockquote className="text-card-foreground/80 italic mb-4 border-l-4 border-primary pl-4">
+                "Minha maior dor era a concorrência acirrada e a baixa conversão. O Manual Buy-Side foi um divisor de águas: em um mês, fechei 5 sistemas a mais!"
+              </blockquote>
+              
+              <p className="text-card-foreground font-medium">
+                Faça como ele: Imersão no Manual de Compra Solar Buy-Side: pensa como seu cliente e torne-se um Vendedor de Alta Performance!
+              </p>
+            </div>
           </div>
         </div>
 

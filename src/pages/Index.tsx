@@ -1,7 +1,9 @@
 import Hero from "@/components/Hero";
 import ManualReveal from "@/components/ManualReveal";
 import TargetAudience from "@/components/TargetAudience";
+import ManualInfo from "@/components/ManualInfo";
 import Results from "@/components/Results";
+import ManualFeatures from "@/components/ManualFeatures";
 import UrgencyWarning from "@/components/UrgencyWarning";
 import BuyerPreparation from "@/components/BuyerPreparation";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
@@ -17,7 +19,9 @@ const Index = () => {
       <Hero />
       <ManualReveal />
       <TargetAudience />
+      <ManualInfo />
       <Results />
+      <ManualFeatures />
       <UrgencyWarning />
       <BuyerPreparation />
       <TestimonialsCarousel />
