@@ -10,6 +10,7 @@ import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import AuthorCredibility from "@/components/AuthorCredibility";
 import FinalOffer from "@/components/FinalOffer";
 import LeadMagnet from "@/components/LeadMagnet";
+import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -28,6 +29,7 @@ const Index = () => {
       <AuthorCredibility />
       <FinalOffer />
       <LeadMagnet />
+      <Contact />
       <FAQ />
       <Footer />
     </div>
