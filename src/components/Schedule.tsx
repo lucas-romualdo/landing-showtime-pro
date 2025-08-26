@@ -1,198 +1,104 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Clock, MapPin } from "lucide-react";
+import { CheckCircle, Users, BarChart2, Shield, Award } from "lucide-react";
 
-const Schedule = () => {
-  const scheduleData = {
-    "dia-1": [
-      {
-        time: "09:00 - 09:30",
-        title: "Credenciamento e Coffee Break",
-        speaker: "",
-        location: "Hall Principal",
-        type: "networking"
-      },
-      {
-        time: "09:30 - 10:30",
-        title: "Abertura: O Futuro da IA Generativa",
-        speaker: "Dr. Maria Silva - CEO Tech Innovations",
-        location: "Auditório Principal",
-        type: "keynote"
-      },
-      {
-        time: "10:45 - 11:30",
-        title: "Blockchain e Web3: Além das Criptomoedas",
-        speaker: "João Santos - CTO BlockChain Brasil",
-        location: "Sala A",
-        type: "palestra"
-      },
-      {
-        time: "11:45 - 12:30",
-        title: "Workshop: React com TypeScript na Prática",
-        speaker: "Ana Costa - Senior Developer",
-        location: "Lab 1",
-        type: "workshop"
-      },
-      {
-        time: "12:30 - 14:00",
-        title: "Almoço e Networking",
-        speaker: "",
-        location: "Área de Alimentação",
-        type: "networking"
-      },
-      {
-        time: "14:00 - 14:45",
-        title: "Cloud Computing: Estratégias para 2024",
-        speaker: "Carlos Lima - AWS Solutions Architect",
-        location: "Auditório Principal",
-        type: "palestra"
-      }
-    ],
-    "dia-2": [
-      {
-        time: "09:00 - 09:45",
-        title: "Cybersecurity: Protegendo o Futuro Digital",
-        speaker: "Paula Oliveira - CISO Security Corp",
-        location: "Auditório Principal",
-        type: "keynote"
-      },
-      {
-        time: "10:00 - 10:45",
-        title: "DevOps e Cultura de Inovação",
-        speaker: "Roberto Mendes - Engineering Manager",
-        location: "Sala B",
-        type: "palestra"
-      },
-      {
-        time: "11:00 - 11:45",
-        title: "Workshop: Machine Learning com Python",
-        speaker: "Dra. Fernanda Torres - Data Scientist",
-        location: "Lab 2",
-        type: "workshop"
-      },
-      {
-        time: "12:00 - 12:45",
-        title: "Startups: Como Escalar uma Empresa Tech",
-        speaker: "Gabriel Rocha - Founder TechStart",
-        location: "Sala A",
-        type: "palestra"
-      },
-      {
-        time: "12:45 - 14:15",
-        title: "Almoço e Networking",
-        speaker: "",
-        location: "Área de Alimentação",
-        type: "networking"
-      },
-      {
-        time: "14:15 - 15:00",
-        title: "IoT e Cidades Inteligentes",
-        speaker: "Marina Azevedo - Smart Cities Expert",
-        location: "Auditório Principal",
-        type: "palestra"
-      }
-    ],
-    "dia-3": [
-      {
-        time: "09:00 - 09:45",
-        title: "Sustentabilidade e Green Tech",
-        speaker: "Eduardo Pires - Sustainability Officer",
-        location: "Auditório Principal",
-        type: "keynote"
-      },
-      {
-        time: "10:00 - 10:45",
-        title: "O Futuro do Trabalho Remoto",
-        speaker: "Lucia Freitas - HR Tech Specialist",
-        location: "Sala A",
-        type: "palestra"
-      },
-      {
-        time: "11:00 - 12:00",
-        title: "Panel: Mulheres na Tecnologia",
-        speaker: "Várias Speakers",
-        location: "Auditório Principal",
-        type: "panel"
-      },
-      {
-        time: "12:00 - 12:30",
-        title: "Encerramento e Próximos Passos",
-        speaker: "Equipe TechFuture",
-        location: "Auditório Principal",
-        type: "encerramento"
-      }
-    ]
-  };
+const ManualContent = () => {
+  // Dados adaptados para as 4 fases do manual, com base nos blocos 5, 6 e 8
+  const contentData = {
+    "fase-1": {
+      title: "Fundamentos e Riscos",
+      description: "Entenda os conceitos essenciais e os principais riscos para orientar seu cliente.",
+      items: [
+        "Os 3 grandes riscos ao comprar um sistema solar",
+        "Conceitos técnicos essenciais para uma compra segura",
+        "Reconhecimento de marcas e distribuidores de alta confiança"
+      ]
+    },
+    "fase-2": {
+      title: "Análise e Comparação",
+      description: "Domine a arte de avaliar propostas e demonstrar o valor da sua solução.",
+      items: [
+        "Capacidade de analisar propostas com critérios técnicos",
+        "Como sua proposta será avaliada e comparada",
+        "Demonstrar com clareza o valor técnico e econômico da solução"
+      ]
+    },
+    "fase-3": {
+      title: "Seleção e Negociação",
+      description: "Aprenda a se posicionar como a escolha certa e a fugir da guerra de preços.",
+      items: [
+        "Critérios para selecionar empresas sérias e competentes",
+        "Adotar uma postura consultiva e centrada no cliente",
+        "Aumento da taxa de conversão e menor dependência de descontos"
+      ]
+    },
+    "fase-4": {
+      title: "Pós-Venda e Confiança",
+      description: "Construa um relacionamento sólido e garanta a satisfação do cliente.",
+      items: [
+        "Avaliação precisa da reputação e do suporte pós-venda",
+        "Mais confiança, conexão e autoridade no processo de venda",
+        "Anexos técnicos que auxiliam na tomada de decisão"
+      ]
+    }
+  };
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case "keynote": return "bg-primary text-primary-foreground";
-      case "workshop": return "bg-green-600 text-white";
-      case "palestra": return "bg-blue-600 text-white";
-      case "panel": return "bg-purple-600 text-white";
-      case "networking": return "bg-orange-600 text-white";
-      case "encerramento": return "bg-red-600 text-white";
-      default: return "bg-secondary text-secondary-foreground";
-    }
-  };
+  const icons = [
+    <Shield className="w-8 h-8 text-primary" />,
+    <BarChart2 className="w-8 h-8 text-primary" />,
+    <Users className="w-8 h-8 text-primary" />,
+    <Award className="w-8 h-8 text-primary" />
+  ];
 
-  return (
-    <section className="py-20 bg-gradient-secondary">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <Badge variant="outline" className="mb-4">
-            Programação
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Agenda Completa do <span className="text-primary">Evento</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Três dias intensos de aprendizado, networking e inovação com os melhores especialistas do mercado.
-          </p>
-        </div>
+  return (
+    <section className="py-20 bg-gradient-secondary">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 animate-fade-in">
+          <Badge variant="outline" className="mb-4">
+            Conteúdo do Manual
+          </Badge>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Uma Jornada de Compra em <span className="text-primary">4 Fases</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            O manual organiza todo o processo de compra em uma metodologia clara, guiando você e seu cliente do início ao fim.
+          </p>
+        </div>
 
-        <Tabs defaultValue="dia-1" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="dia-1">Dia 1 - 15/03</TabsTrigger>
-            <TabsTrigger value="dia-2">Dia 2 - 16/03</TabsTrigger>
-            <TabsTrigger value="dia-3">Dia 3 - 17/03</TabsTrigger>
-          </TabsList>
+        <Tabs defaultValue="fase-1" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
+            <TabsTrigger value="fase-1">Fase 1</TabsTrigger>
+            <TabsTrigger value="fase-2">Fase 2</TabsTrigger>
+            <TabsTrigger value="fase-3">Fase 3</TabsTrigger>
+            <TabsTrigger value="fase-4">Fase 4</TabsTrigger>
+          </TabsList>
 
-          {Object.entries(scheduleData).map(([day, events]) => (
-            <TabsContent key={day} value={day} className="space-y-4">
-              {events.map((event, index) => (
-                <Card key={index} className="p-6 hover:shadow-glow transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.05}s` }}>
-                  <div className="flex flex-col md:flex-row md:items-center gap-4">
-                    <div className="flex items-center gap-2 text-muted-foreground min-w-fit">
-                      <Clock className="w-4 h-4" />
-                      <span className="font-mono">{event.time}</span>
-                    </div>
-                    
-                    <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
-                        <h3 className="text-lg font-semibold">{event.title}</h3>
-                        <Badge className={getTypeColor(event.type)}>
-                          {event.type}
-                        </Badge>
-                      </div>
-                      {event.speaker && (
-                        <p className="text-muted-foreground mb-2">{event.speaker}</p>
-                      )}
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <MapPin className="w-4 h-4" />
-                        <span>{event.location}</span>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </TabsContent>
-          ))}
-        </Tabs>
-      </div>
-    </section>
-  );
+          {Object.entries(contentData).map(([phase, data], index) => (
+            <TabsContent key={phase} value={phase}>
+              <Card className="p-8 hover:shadow-glow transition-all duration-300 animate-scale-in">
+                <div className="flex flex-col md:flex-row md:items-center gap-6">
+                  <div>{icons[index]}</div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2">{data.title}</h3>
+                    <p className="text-muted-foreground mb-6">{data.description}</p>
+                    <ul className="space-y-3">
+                      {data.items.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+            </TabsContent>
+          ))}
+        </Tabs>
+      </div>
+    </section>
+  );
 };
 
-export default Schedule;
+export default ManualContent; // Renomeado de Schedule para ManualContent
