@@ -62,7 +62,9 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'price-bg': 'hsl(var(--price-background))',
+				'price-fg': 'hsl(var(--price-foreground))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -129,7 +131,8 @@ export default {
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
-				'card': 'var(--shadow-card)'
+				'card': 'var(--shadow-card)',
+				'button': 'var(--shadow-button)'
 			}
 		}
 	},

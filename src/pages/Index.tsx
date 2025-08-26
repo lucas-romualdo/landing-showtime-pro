@@ -1,10 +1,11 @@
 import Hero from "@/components/Hero";
+import VideoSection from "@/components/VideoSection";
 import ManualReveal from "@/components/ManualReveal";
 import TargetAudience from "@/components/TargetAudience";
 import ManualInfo from "@/components/ManualInfo";
 import Results from "@/components/Results";
 import ManualFeatures from "@/components/ManualFeatures";
-import UrgencyWarning from "@/components/UrgencyWarning";
+import Pricing from "@/components/Pricing";
 import BuyerPreparation from "@/components/BuyerPreparation";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import AuthorCredibility from "@/components/AuthorCredibility";
@@ -18,12 +19,12 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Hero />
-      <ManualReveal />
+      <VideoSection />
       <TargetAudience />
       <ManualInfo />
       <Results />
       <ManualFeatures />
-      <UrgencyWarning />
+      <Pricing />
       <BuyerPreparation />
       <TestimonialsCarousel />
       <AuthorCredibility />
